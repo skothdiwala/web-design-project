@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+    color: #8d8787;
+    background-image: url('pastelbg.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+  
+  header, footer {
+    background-color: rgba(188, 235, 207, 0.15);
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  #logo {
+    width: 7%; /* Relative width */
+    color: #8d8787;
+    height: auto;
+    padding: 10px 0;
+  }
+  
+  header {
+    background-color: rgba(188, 235, 207, 0.15);
+    padding: 20px 0;
+    text-align: center;
+  }
+  .dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  
+  nav {
+    margin-top: 20px;
+    display: flex; /* Flexbox */
+    justify-content: center; /* Center items horizontally */
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 40px;
+  }
+  nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+  }
+  nav ul li {
+      display: inline; /* Display menu items horizontally */
+      margin-right: 20px; /* Add spacing between menu items */
+  }
+  
+  /*The following Overall, this code adjusts the layout of the navigation menu when the screen width is 768 pixels or less, making it more suitable 
+for smaller screens or mobile devices by stacking menu items vertically and centering them within the navigation container.*/
+  @media screen and (max-width: 768px) {
+      nav {
+          flex-direction: column; /* Stack menu items vertically */
+          align-items: center; /* Center align vertically */
+      }
+      
+      nav ul li {
+          display: block; /* Display menu items vertically */
+          margin: 10px 0; /* Add spacing between menu items */
+      }
+  }
+  .carousel-container {
+    overflow: hidden;
+    position: relative;
+  }
+  .carousel-wrapper {
+    display: flex;
+    transition: transform 1.0s ease-in-out;
+    height: 600px; /* Adjust carousel height as needed */
+    margin-top: 55px; /* Add margin to move the carousel down */
+    width: 150%;
+  }
+  .carousel-item {
+    flex: 0 0 auto;
+    width: auto; /* maintain aspect ratio of images */
+  }
+  .carousel-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .carousel-arrow {
+    cursor: pointer;
+    font-size: 30px; /* Adjust arrow size as needed */
+    font-weight: bold; /* Adjust arrow thickness */   
+  }
+  .social-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+  }
+  .social-icons a {
+      margin: 0 10px; /* Adjust margin as needed */
+  }
+  
+  
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(254, 254, 254, 0.8);
+    padding: 5px 0;
+    text-align: middle;
+  }
+  
+  footer a {
+    
+    margin: 0 10px;
+    color: #333;
+    
+  }

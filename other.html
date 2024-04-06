@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portraits</title>
+    <link rel="stylesheet" href="other.css">
+
+</head>
+
+<body>
+
+    <header>
+        <img id="logo" src="skpho.png">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="welcome.html">Welcome</a>
+            <a href="about.html">About</a>
+            <div class="dropdown">
+                <a href="#">Portfolio</a>
+                <div class="dropdown-content">
+                    <a href="portraits.html">Portraits</a>
+                    <a href="weddings.html">Weddings</a>
+                    <a href="family.html">Family</a>
+                    <a href="product.html">Product</a>
+                    <a href="other.html">Other</a>
+                </div>
+            </div>   
+                <a href="testimonials.html">Testimonials</a>
+                <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+<div class="carousel-container">
+    <div class="carousel-wrapper" id="carouselWrapper"> 
+        <img src="Bird-Food.jpg" class="carousel-item" alt="Slide 1">
+        <img src="Pink-Flower.jpg" class="carousel-item" alt="Slide 2">
+        <img src="Flower.jpg" class="carousel-item" alt="Slide 3">
+        <img src="Clitorius.jpg" class="carousel-item" alt="Slide 4">
+        <img src="Limes.jpg" class="carousel-item" alt="Slide 5">
+        <img src="Cacti.jpg" class="carousel-item" alt="Slide 6">
+        <img src="Banks.jpg" class="carousel-item" alt="Slide 7">
+        <img src="Clock.jpg" class="carousel-item" alt="Slide 8">
+        <img src="chandilier.jpg" class="carousel-item" alt="Slide 9">
+        <img src="Bynoe-Cap.jpg" class="carousel-item" alt="Slide 10">
+        <img src="CakeBox1.jpg" class="carousel-item" alt="Slide 11">
+        <img src="CDB-Photobook.jpg" class="carousel-item" alt="Slide 12">
+    </div>
+    <div class="carousel-controls">
+        <span class="carousel-arrow" id="prevArrow">&lt;</span>
+        <span class="carousel-arrow" id="nextArrow">&gt;</span>
+    </div>
+    
+</div>
+
+<script>
+    const wrapper = document.getElementById('carouselWrapper');
+    const prevArrow = document.getElementById('prevArrow');
+    const nextArrow = document.getElementById('nextArrow');
+    let offset = 0;
+
+    function moveCarousel(direction) {
+        const numImages = wrapper.children.length;
+        const slideWidth = 100 / numImages;
+        if (direction === 'next') {
+            offset -= slideWidth; // Move forward by one image
+            if (offset < -(270 - slideWidth)) { // Move back to the first image when reaching the end
+                offset = 0;
+            }
+        } else if (direction === 'prev') {
+            offset += slideWidth; // Move backward by one image
+            if (offset > 0) { // Move to the last image when reaching the beginning
+                offset = -(100 - slideWidth);
+            }
+        }
+        wrapper.style.transform = `translateX(${offset}%)`;
+    }
+
+    prevArrow.addEventListener('click', () => moveCarousel('prev'));
+    nextArrow.addEventListener('click', () => moveCarousel('next'));
+
+    // Automatically slide to the left every 1 second
+    setInterval(() => moveCarousel('next'), 1000);
+</script>
+
+<footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/stephaniekothdiwalaphotography/" target="_blank">
+            <img src="facebook-icon.png" alt="Facebook" width="30" height="30">
+        </a>
+        <a href="https://www.instagram.com/stephaniekothdiwalaphotography/" target="_blank">
+            <img src="instagram-icon.png" alt="Instagram" width="30" height="30">
+        </a>
+        <a href="mailto:skphotography@skp.com" target="_blank">
+            <img src="emailBW.png" alt="Email" width="30" height="30">
+        </a>
+        <a href="https://twitter.com/" target="_blank">
+            <img src="twitter-icon.png" alt="Twitter" width="30" height="30">
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=12345678910" target="_blank">
+            <img src="whatsapp-logo.png" alt="WhatsApp" width="30" height="30">
+        </a>   
+    </div>
+
+
+</footer>
+
+</body>
+</html>
+
